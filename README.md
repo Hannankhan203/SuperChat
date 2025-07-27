@@ -30,15 +30,3 @@ A real-time chat application built with **React** and **Firebase**, featuring us
    ```sh
    git clone https://github.com/yourusername/superchat.git
    cd superchat
-
-### Project Structure
-- src/
-  ├── components/
-  │   ├── Auth/               # Auth components
-  │   ├── Chat/               # Chat components
-  │   ├── Navbar.js           # Navigation
-  │   └── PrivateRoute.js     # Protected routes
-  ├── context/
-  │   └── AuthContext.js      # Auth state management
-  ├── firebase.js             # Firebase config
-  └── App.js                  # Main component
