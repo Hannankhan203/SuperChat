@@ -1,12 +1,44 @@
-# React + Vite
+# SuperChat 🔥💬
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![SuperChat Demo](demo.gif) <!-- Replace with actual demo GIF/screenshot -->
 
-Currently, two official plugins are available:
+A real-time chat application built with **React** and **Firebase**, featuring user authentication and live messaging.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+- **User Authentication** (Sign Up / Login / Logout)
+- **Real-time Messaging** with Firebase Firestore
+- **Responsive Design** (Mobile & Desktop)
+- **Modern UI** with smooth animations
+- **Message Timestamps**
+- **Protected Routes** for authenticated users
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📚 Tech Stack
+- Frontend: React.js
+- Routing: React Router
+- Authentication: Firebase Auth
+- Database: Firestore (Real-time)
+- Styling: CSS with variables
+- State: Context API
+
+### Prerequisites
+- Node.js (v14+)
+- Firebase account
+
+### Installation
+1. Clone the repo
+   ```sh
+   git clone https://github.com/yourusername/superchat.git
+   cd superchat
+
+### Project Structure
+- src/
+  ├── components/
+  │   ├── Auth/               # Auth components
+  │   ├── Chat/               # Chat components
+  │   ├── Navbar.js           # Navigation
+  │   └── PrivateRoute.js     # Protected routes
+  ├── context/
+  │   └── AuthContext.js      # Auth state management
+  ├── firebase.js             # Firebase config
+  └── App.js                  # Main component
