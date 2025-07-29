@@ -13,8 +13,8 @@ function AuthDetails() {
     <div className="auth-details">
       {currentUser ? (
         <>
-          <p>Signed in as {currentUser.email}</p>
-          <button onClick={handleSignOut}>Sign Out</button>
+          <p className="current-user">Signed in as {currentUser.email}</p>
+          <button className="signout-btn" onClick={handleSignOut}>Sign Out</button>
         </>
       ) : (
         <p>Please sign in</p>

@@ -40,13 +40,24 @@ nav {
   box-shadow: var(--box-shadow);
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
+  /* border: 2px solid black; */
 }
+
+  .signout-btn {
+    padding: 0.5rem;
+    font-size: 0.5rem;
+  }
+
+  .current-user {
+    /* border: 2px solid black; */
+    /* text-align: left; */
+  }
 
 nav a {
   color: var(--dark-color);
@@ -61,6 +72,13 @@ nav a:hover {
 }
 
 /* Auth Forms */
+.auth-desktop {
+  display: block;
+}
+
+.auth-mobile {
+  display: none;
+}
 .auth-container {
   display: flex;
   justify-content: center;
@@ -309,6 +327,18 @@ nav a:hover {
   background: #aaa;
 }
 
+/* Burger menu icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Mobile nav links hidden by default */
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
 @media screen and (max-width: 576px) {
   /* Global Styles */
   :root {
@@ -336,7 +366,7 @@ nav a:hover {
   body {
     background-color: #f5f7fa;
     color: var(--dark-color);
-    line-height: 1.6;
+    line-height: 0.5;
   }
 
   /* Layout */
@@ -350,7 +380,7 @@ nav a:hover {
   nav {
     background-color: white;
     box-shadow: var(--box-shadow);
-    padding: 1rem 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -358,6 +388,7 @@ nav a:hover {
     top: 0;
     z-index: 100;
     width: 100%;
+    height: 15vh;
   }
 
   nav a {
@@ -373,6 +404,20 @@ nav a:hover {
   }
 
   /* Auth Forms */
+  .auth-desktop {
+    display: none;
+  }
+
+  .auth-mobile {
+    display: flex;
+    margin-top: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .auth-mobile p {
+    text-align: center;
+  }
   .auth-container {
     display: flex;
     justify-content: center;
@@ -383,26 +428,26 @@ nav a:hover {
 
   .auth-form {
     background: white;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
     width: 100%;
-    max-width: 400px;
+    max-width: 250px;
   }
 
   .auth-form h2 {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     color: var(--primary-color);
     text-align: center;
   }
 
   .auth-form input {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     margin-bottom: 1rem;
     border: 1px solid #ddd;
     border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: var(--transition);
   }
 
@@ -414,12 +459,12 @@ nav a:hover {
 
   .auth-form button {
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
@@ -439,9 +484,12 @@ nav a:hover {
   .chat-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     /* margin: 2rem auto; */
     margin-top: 4rem;
+    padding-top: 5rem;
     background: white;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -453,7 +501,7 @@ nav a:hover {
   .chat-header {
     background-color: var(--primary-color);
     color: white;
-    padding: 1rem;
+    padding: 0.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -468,19 +516,20 @@ nav a:hover {
 
   .message-form {
     display: flex;
-    padding: 1rem;
+    padding: 0.8rem;
     background-color: white;
     border-top: 1px solid #eee;
     /* border: 2px solid black; */
     border-top: 1px solid gray;
+    width: 100vw;
   }
 
   .message-form input {
     flex: 1;
-    padding: 0.75rem;
+    padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: var(--border-radius);
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-right: 0.5rem;
   }
 
@@ -490,7 +539,7 @@ nav a:hover {
   }
 
   .message-form button {
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1.25rem;
     background-color: var(--primary-color);
     color: white;
     border: none;
@@ -498,6 +547,7 @@ nav a:hover {
     font-weight: 500;
     cursor: pointer;
     transition: var(--transition);
+    font-size: 0.8rem;
   }
 
   .message-form button:hover {
@@ -507,11 +557,13 @@ nav a:hover {
   /* Message Styles */
   .message {
     margin-bottom: 1rem;
-    padding: 0.75rem 1rem;
+    padding: 0.5rem 0.75rem;
     border-radius: var(--border-radius);
-    max-width: 70%;
+    max-width: 100%;
     word-wrap: break-word;
     position: relative;
+    /* border: 2px solid black; */
+    width: 100vw;
   }
 
   .message.current-user {
@@ -530,9 +582,9 @@ nav a:hover {
   .message-info {
     display: flex;
     justify-content: space-between;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    opacity: 0.8;
+    font-size: 0.6rem;
+    margin-top: 1rem;
+    opacity: 0.9;
   }
 
   .message.current-user .message-info {
@@ -619,5 +671,41 @@ nav a:hover {
 
   ::-webkit-scrollbar-thumb:hover {
     background: #aaa;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 1.25rem;
+    right: 2rem;
+    z-index: 200;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    box-shadow: var(--box-shadow);
+    z-index: 150;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 4rem;
+  }
+
+  .auth-details {
+    margin-top: 1rem;
   }
 }
