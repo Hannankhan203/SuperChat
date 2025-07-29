@@ -49,15 +49,15 @@ nav {
   /* border: 2px solid black; */
 }
 
-  .signout-btn {
-    padding: 0.5rem;
-    font-size: 0.5rem;
-  }
+.signout-btn {
+  padding: 0.5rem;
+  font-size: 0.5rem;
+}
 
-  .current-user {
-    /* border: 2px solid black; */
-    /* text-align: left; */
-  }
+.current-user {
+  /* border: 2px solid black; */
+  /* text-align: left; */
+}
 
 nav a {
   color: var(--dark-color);
@@ -146,8 +146,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  /* margin: 2rem auto; */
-  margin-top: 4rem;
+  margin: 0;
   background: white;
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
@@ -163,6 +162,19 @@ nav a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  /* border: 2px solid black; */
+  position: absolute;
+  width: 100%;
+  top: 10%;
+  left: 0;
+}
+
+.chatbox-title {
+  font-size: 1.2rem;;
+}
+
+.chatbox-subtitle {
+  font-size: 0.7rem;
 }
 
 .chat-messages {
@@ -176,9 +188,11 @@ nav a:hover {
   display: flex;
   padding: 1rem;
   background-color: white;
-  border-top: 1px solid #eee;
-  /* border: 2px solid black; */
+  /* position: absolute; */
   border-top: 1px solid gray;
+  position: relative;
+  top: 10px;
+  border: 2px solid black;
 }
 
 .message-form input {
@@ -388,7 +402,8 @@ nav a:hover {
     top: 0;
     z-index: 100;
     width: 100%;
-    height: 15vh;
+    height: 10vh;
+    /* border: 2px solid black; */
   }
 
   nav a {
@@ -676,8 +691,8 @@ nav a:hover {
   .menu-icon {
     display: block;
     position: absolute;
-    top: 1.25rem;
-    right: 2rem;
+    top: 1rem;
+    right: 1rem;
     z-index: 200;
   }
 

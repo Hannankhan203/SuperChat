@@ -38,9 +38,9 @@ function ChatBox() {
   return (
     <div className="chat-container">
       <div className="chat-header">
-        <h2>SuperChat</h2>
+        <h2 className="chatbox-title">SuperChat</h2>
         <div className="auth-details">
-          <p>Welcome, {username || currentUser?.email}</p>
+          <p className="chatbox-subtitle">Welcome, {username || currentUser?.email}</p>
         </div>
       </div>
       <div className="chat-messages">
