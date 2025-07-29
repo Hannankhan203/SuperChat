@@ -169,14 +169,6 @@ nav a:hover {
   left: 0;
 }
 
-.chatbox-title {
-  font-size: 1.2rem;;
-}
-
-.chatbox-subtitle {
-  font-size: 0.7rem;
-}
-
 .chat-messages {
   flex: 1;
   padding: 1rem;
@@ -536,7 +528,22 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border: 2px solid black; */
   }
+
+  .chatbox-title {
+  font-size: 1.2rem;
+    /* border: 2px solid black; */
+    position: relative;
+    right: 5px;
+}
+
+.chatbox-subtitle {
+  font-size: 0.7rem;
+    /* border: 2px solid black; */
+    position: relative;
+    left: 55px;
+}
 
   .chat-messages {
     flex: 1;
