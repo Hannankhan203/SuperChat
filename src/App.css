@@ -192,7 +192,7 @@ nav a:hover {
   border-top: 1px solid gray;
   position: relative;
   top: 10px;
-  border: 2px solid black;
+  /* border: 2px solid black; */
 }
 
 .message-form input {
@@ -495,6 +495,22 @@ nav a:hover {
     text-align: center;
   }
 
+
+  .current-user {
+    font-size: 0.7rem;
+  }
+
+  .auth-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+  /* border: 2px solid black; */
+  width: 100vw;
+  position: relative;
+  right: 35px;
+}
+
   /* Chat Layout */
   .chat-container {
     display: flex;
@@ -701,12 +717,13 @@ nav a:hover {
     flex-direction: column;
     background-color: white;
     position: absolute;
-    top: 64px;
+    top: 58px;
     left: 0;
     width: 100%;
     padding: 1rem 2rem;
     box-shadow: var(--box-shadow);
     z-index: 150;
+    /* border: 2px solid black; */
   }
 
   .nav-links.active {
